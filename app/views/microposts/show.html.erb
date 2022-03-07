@@ -1,7 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @micropost %>
-
+<% if @user %> 
+  <p>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </p>
+  <p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </p>
+<% end %>
 <div>
   <%= link_to "Edit this micropost", edit_micropost_path(@micropost) %> |
   <%= link_to "Back to microposts", microposts_path %>
