@@ -1,19 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @user %>
-<% if @micropost %> 
-  <p>
-    <strong>User Id:</strong>
-    <%= @micropost.user_id %>
-  </p> 
-  <p>
-    <strong>Content:</strong>
-    <%= @micropost.content %>
-  </p>
-<% end %>
 <div>
   <%= link_to "Edit this user", edit_user_path(@user) %> |
   <%= link_to "Back to users", users_path %>
-
   <%= button_to "Destroy this user", @user, method: :delete %>
 </div>
